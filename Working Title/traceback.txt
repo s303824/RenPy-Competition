@@ -1,15 +1,15 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While loading <renpy.display.im.Image object ('gui/toptextbox.png') at 0x0000000004cda310>:
-  File "game/script.rpy", line 30, in script
-    adult "Just wonderful." (multiple=2)
-OSError: Couldn't find file 'gui/toptextbox.png'.
+While processing text tag {color=#0a0a0} in '{color=#0a0a0}The creature awakes!'.:
+  File "game/script.rpy", line 37, in script
+    adult "..." (multiple=2)
+Exception: Color string '0a0a0' must be 3, 4, 6, or 8 hex digits long.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 30, in script
-    adult "Just wonderful." (multiple=2)
+  File "game/script.rpy", line 37, in script
+    adult "..." (multiple=2)
   File "C:\Users\Quirk\Documents\RenPy-Competition\renpy\ast.py", line 921, in execute
     renpy.exports.say(who, what, *args, **kwargs)
   File "C:\Users\Quirk\Documents\RenPy-Competition\renpy\exports.py", line 1373, in say
@@ -50,23 +50,25 @@ Full traceback:
     surf = render(child, width, height, cst, cat)
   File "render.pyx", line 170, in renpy.display.render.render
   File "render.pyx", line 266, in renpy.display.render.render
-  File "C:\Users\Quirk\Documents\RenPy-Competition\renpy\display\layout.py", line 1369, in render
-    back = render(style.background, bw, bh, st, at)
+  File "C:\Users\Quirk\Documents\RenPy-Competition\renpy\display\layout.py", line 1334, in render
+    surf = render(child,
   File "render.pyx", line 170, in renpy.display.render.render
   File "render.pyx", line 266, in renpy.display.render.render
-  File "C:\Users\Quirk\Documents\RenPy-Competition\renpy\display\im.py", line 627, in render
-    return cache.get(self, render=True)
-  File "C:\Users\Quirk\Documents\RenPy-Competition\renpy\display\im.py", line 295, in get
-    surf = image.load()
-  File "C:\Users\Quirk\Documents\RenPy-Competition\renpy\display\im.py", line 720, in load
-    raise e
-  File "C:\Users\Quirk\Documents\RenPy-Competition\renpy\display\im.py", line 685, in load
-    filelike = renpy.loader.load(self.filename)
-  File "C:\Users\Quirk\Documents\RenPy-Competition\renpy\loader.py", line 820, in load
-    raise IOError("Couldn't find file '%s'." % name)
-OSError: Couldn't find file 'gui/toptextbox.png'.
+  File "C:\Users\Quirk\Documents\RenPy-Competition\renpy\display\layout.py", line 884, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\Quirk\Documents\RenPy-Competition\renpy\text\text.py", line 2109, in render
+    virtual_layout = Layout(self, width, height, renders, drawable_res=False, size_only=True)
+  File "C:\Users\Quirk\Documents\RenPy-Competition\renpy\text\text.py", line 627, in __init__
+    self.paragraphs = self.segment(text.tokens, style, renders, text)
+  File "C:\Users\Quirk\Documents\RenPy-Competition\renpy\text\text.py", line 1195, in segment
+    push().color = renpy.easy.color(value)
+  File "C:\Users\Quirk\Documents\RenPy-Competition\renpy\color.py", line 167, in __new__
+    raise Exception("Color string {!r} must be 3, 4, 6, or 8 hex digits long.".format(c))
+Exception: Color string '0a0a0' must be 3, 4, 6, or 8 hex digits long.
 
 Windows-10-10.0.19044 AMD64
 Ren'Py 8.0.3.22090809
-Working Title 1.0
-Sun Mar 12 18:35:14 2023
+Working Title 
+Sun Mar 12 19:12:37 2023

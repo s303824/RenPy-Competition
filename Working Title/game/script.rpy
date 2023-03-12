@@ -33,10 +33,13 @@ label start:
     kid "The creature awakes!" (multiple=2)
     "" (multiple=2)
 
-    kid "The creature awakes!" (multiple=2)
+    kid "{color=#808080}The creature awakes!" (multiple=2)
     adult "..." (multiple=2)
 
     kid "What now?" (multiple=2)
+    adult "..." (multiple=2)
+
+    kid "{color=#808080}What now?" (multiple=2)
     adult "Now we begin our work." (multiple=2)
 
     # This ends the game.
