@@ -30,17 +30,17 @@ label start:
     # Always include (multiple=2)
 
     protagonist "Oh thank god, you're here. Now we can get to work."
-    kid "The creature awakes!" (multiple=2)
+    "The creature awakes." (multiple=2)
     "" (multiple=2)
 
-    kid "{color=#808080}The creature awakes!" (multiple=2)
-    adult "..." (multiple=2)
+    "{color=#808080}The creature awakes." (multiple=2)
+    "{color=#ff0000}..." (multiple=2)
 
-    kid "What now?" (multiple=2)
-    adult "..." (multiple=2)
+    "What now?" (multiple=2)
+    "{color=#808080}..." (multiple=2)
 
-    kid "{color=#808080}What now?" (multiple=2)
-    adult "Now we begin our work." (multiple=2)
+    "{color=#808080}What now?" (multiple=2)
+    "{color=#ff0000}Now we begin our work." (multiple=2)
 
     # This ends the game.
 

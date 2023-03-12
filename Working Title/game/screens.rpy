@@ -129,15 +129,12 @@ style namebox_label is say_label
 
 style block1_multiple2_say_window:
     yalign 0.0
-    background "gui/textbox.png"
+
 
 style say_window:
-    xpos 100
-    ypos 1080
-    xfill True
-    background "gui/textbox.png"
+    background "gui/textbox.jpg"
     yalign gui.textbox_yalign
-    ysize gui.textbox_height
+    ysize gui.textbox_height-100
 
 style namebox:
     xpos gui.name_xpos
@@ -1427,7 +1424,7 @@ screen quick_menu():
 
 style window:
     variant "small"
-    background "gui/phone/textbox.png"
+    background "gui/phone/textbox.jpg"
 
 style radio_button:
     variant "small"
