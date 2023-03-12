@@ -1,0 +1,14 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 7: unmatched ')'
+    Character("Inner Child", color="#ffffff"))
+                                              ^
+
+File "game/script.rpy", line 8: unmatched ')'
+    Character("Death Drive", color="#ff0000"))
+                                              ^
+
+Ren'Py Version: Ren'Py 8.0.3.22090809
+Sun Mar 12 04:57:37 2023
