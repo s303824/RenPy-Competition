@@ -1,0 +1,7 @@
+doc
+/gui
+/launcher
+/lib
+/module
+/renpy
+/renpy.app
