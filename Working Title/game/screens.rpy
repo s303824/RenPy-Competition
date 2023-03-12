@@ -115,30 +115,6 @@ screen say(who, what):
     if not renpy.variant("small"):
         add SideImage() xalign 0.0 yalign 1.0
 
-screen mutliple_say(who, what, multiple):
-    if multiple == 1:
-        style_prefix "multiple2_say"
-    elif multiple == 2:
-        style_prefix "say"
-    window:
-        id "window"
-
-        if who is not None:
-
-            window:
-                id "namebox"
-                style "namebox"
-                text who id "who"
-
-        text what id "what"
-
-
-    ## If there's a side image, display it above the text. Do not display on the
-    ## phone variant - there's no room.
-    if not renpy.variant("small"):
-        add SideImage() xalign 0.0 yalign 1.0
-
-
 ## Make the namebox available for styling through the Character object.
 init python:
     config.character_id_prefixes.append('namebox')
@@ -151,14 +127,9 @@ style say_thought is say_dialogue
 style namebox is default
 style namebox_label is say_label
 
-
-style multiple2_say_window:
-    xpos 100
-    ypos 270
-    xfill True
+style block1_multiple2_say_window:
+    yalign 0.0
     background "gui/textbox.png"
-    yalign gui.textbox_yalign
-    ysize gui.textbox_height
 
 style say_window:
     xpos 100

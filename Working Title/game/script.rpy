@@ -26,9 +26,18 @@ label start:
     show sylvie green smile
 
     # These display lines of dialogue.
+
+    # Always include (multiple=2)
+
+    protagonist "Oh thank god, you're here. Now we can get to work."
     kid "The creature awakes!" (multiple=2)
-    adult "Just wonderful." (multiple=1)
-    #protagonist "Oh god, you're here. Now we can get to work."
+    "" (multiple=2)
+
+    kid "The creature awakes!" (multiple=2)
+    adult "..." (multiple=2)
+
+    kid "What now?" (multiple=2)
+    adult "Now we begin our work." (multiple=2)
 
     # This ends the game.
 

@@ -2,13 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 7: unmatched ')'
-    Character("Inner Child", color="#ffffff"))
-                                              ^
-
-File "game/script.rpy", line 8: unmatched ')'
-    Character("Death Drive", color="#ff0000"))
-                                              ^
+File "game/script.rpy", line 29: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation.
+    protagonist "Oh god, you're here. Now we can get to work."
+    ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Sun Mar 12 04:57:37 2023
+Sun Mar 12 18:36:19 2023
