@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 29: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation.
-    protagonist "Oh god, you're here. Now we can get to work."
+File "game/script.rpy", line 35: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    death_drive"{color=#ff0000}{i}The lack of feeling at all?{/i}" (multiple=2) with dissolve
     ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Sun Mar 12 18:36:19 2023
+Sun Mar 12 21:08:38 2023
