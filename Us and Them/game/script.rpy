@@ -52,8 +52,7 @@ label start:
     inner_child "Viewer’s discretion is advised."(multiple=2)
 
 label intro:
-    # first song, adult_voice_intro
-
+    play sound "audio/heartbeat.mp3" fadein 1.0 volume 0.25 loop
     #[FLASH: JINSOL & KNIFE ASSAILANT]
     show bg jinsol and knife guy with flash
     
@@ -66,7 +65,8 @@ label intro:
 
     show bg darkness with flash
 
-    play music "audio/sample.mp3" fadein 1.0
+    #stop sound fadeout 1.0
+    #play music "audio/sample.mp3" fadein 1.0
 
     death_drive"Thank you for doing your best." (multiple=2) with Dissolve(1.0)
     inner_child"" (multiple=2)
@@ -103,8 +103,9 @@ label intro:
 
     death_drive"{i}Your knife is in this room somewhere. This is it: bitter injustice. Your final act of rebellion shall-{/i}" (multiple=2) with dissolve
     inner_child"" (multiple=2)
-
-    stop music 
+    
+    stop sound fadeout 1.0
+    #stop music 
     play music "audio/Renpy2Loop.mp3" fadein 1.0 loop
 
     death_drive"{color=#808080}{i}Your knife is in this room somewhere. This is it: bitter injustice. Your final act of rebellion shall-{/i}" (multiple=2)

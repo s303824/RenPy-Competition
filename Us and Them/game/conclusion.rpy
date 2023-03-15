@@ -125,10 +125,11 @@ label part_4:
 
     menu:
         "Pick up the briefcase":
-            play sound "audio/door.mp3"
+            play sound "audio/door.mp3" noloop 
             show bg darkness with Fade(0.5, 1.0, 0.5)
-            pause(2.0)
+            pause(3.0)
             return
         "Close your eyes again":
+            show bg darkness with Fade(0.5, 1.0, 0.5)
             return
     return

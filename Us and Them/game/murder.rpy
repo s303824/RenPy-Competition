@@ -136,6 +136,7 @@ label part_3:
     mentor"\“This is worth the risk.\”" (multiple=2)
 
     # [SOUND EFFECT: KNOCKING]
+    play sound "audio/knocking.mp3" noloop
 
     mentor"\“And besides...\”" (multiple=2)
     mentor"{color=#808080}\“This is worth the risk.\”" (multiple=2)
@@ -174,6 +175,8 @@ label part_3:
     menu:
         "\“Of course. Anything.\”":
             # [SOUND EFFECT: KNOCKING]
+            play sound "audio/knocking.mp3" noloop
+
             mentor"\“Can you open the door for me?\”" (multiple=2)
             mentor"" (multiple=2)
     
