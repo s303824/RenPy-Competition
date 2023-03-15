@@ -32,7 +32,7 @@ define gui.about = _p("""
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 
-define build.name = "WorkingTitle"
+define build.name = "UsandThem"
 
 
 ## Sounds and music ############################################################
@@ -138,7 +138,7 @@ default preferences.afm_time = 15
 ## This generally should not be changed, and if it is, should always be a
 ## literal string, not an expression.
 
-define config.save_directory = "WorkingTitle-1678592181"
+define config.save_directory = "UsandThem-1678592181"
 
 
 ## Icon ########################################################################
