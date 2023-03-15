@@ -177,15 +177,20 @@ label part_3:
             mentor"\“Can you open the door for me?\”" (multiple=2)
             mentor"" (multiple=2)
     
-    show bg jinsol and knife guy with flash
-    show bg knife grab with flash
+    
+    #[BLACK BACKGROUND]
     show bg darkness with flash
 
-#[BLACK BACKGROUND]
-#[FLASH: JINSOL & KNIFE ASSAILANT BACKGROUND]
-#[FLASH: JINSOL TAKING KNIFE BACKGROUND]
-#[FLASH: JINSOL, BLOOD ON BRIEFCASE BACKGROUND]
-#[BACKGROUND: JINSOL, EYES OPEN SPRITE]
+    #[FLASH: JINSOL & KNIFE ASSAILANT BACKGROUND]
+    show bg jinsol and knife guy with flash
+
+    #[FLASH: JINSOL TAKING KNIFE BACKGROUND]
+    show bg knife grab with flash
+
+    #[FLASH: JINSOL, BLOOD ON BRIEFCASE BACKGROUND]
+    #[BACKGROUND: JINSOL, EYES OPEN SPRITE]
+
+    show bg darkness with flash
+
 
     jump part_4
-    return

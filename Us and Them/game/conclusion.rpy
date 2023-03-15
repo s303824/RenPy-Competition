@@ -89,9 +89,6 @@ label part_4:
     inner_child"{i}Hey...{/i}" (multiple=2)
 
     death_drive"{color=#808080}..." (multiple=2)
-    inner_child"{i}Hey...{/i}" (multiple=2)
-
-    death_drive"{color=#808080}..." (multiple=2)
     inner_child"{i}When you get out of here.{/i}" (multiple=2)
 
     death_drive"{color=#808080}..." (multiple=2)
@@ -114,10 +111,11 @@ label part_4:
 
     death_drive"Do you think she has enough energy to get up right now?" (multiple=2)
     inner_child"{color=#808080}Yeah, it is." (multiple=2)
-
+    
+    stop music
     protagonist"Quiet."
-
     # [BACKGROUND: PRINTING PRESS]
+    scene bg printing room
 
     protagonist"You’re both so damn loud."
 
@@ -127,6 +125,9 @@ label part_4:
 
     menu:
         "Pick up the briefcase":
+            play sound "audio/door.mp3"
+            show bg darkness with Fade(0.5, 1.0, 0.5)
+            pause(2.0)
             return
         "Close your eyes again":
             return

@@ -23,7 +23,7 @@ label part_2:
             death_drive"{color=#808080}We don’t want to think about this." (multiple=2)
             inner_child"But we need to. Now more than ever." (multiple=2)
 
-# [FADE TO MOTHER MEMORY GIF]
+    # [FADE TO MOTHER MEMORY GIF]
 
     death_drive"" (multiple=2)
     inner_child"{i}You were only ten years old.{/i}" (multiple=2)
@@ -90,4 +90,3 @@ label part_2:
 
 # [FADE TO BACKGROUND: BLOODY HANDS]
     jump part_3
-    return

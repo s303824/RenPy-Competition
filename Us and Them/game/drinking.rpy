@@ -50,6 +50,7 @@ label part_1:
 
     # [FADE TO ALCOHOL MEMORY GIF]
     show bg bar with fade
+
     death_drive"Do you remember the first time you got drunk?" (multiple=2)
     inner_child"" (multiple=2)
 
@@ -115,10 +116,8 @@ label part_1:
     death_drive"Is that what you want? Do you want to confine us to that life of quiet desperation?" (multiple=2)
     inner_child"{color=#808080}Only to wake up, remember, and do it all over again." (multiple=2)
 
-    death_drive"{color=#808080}Is that what you want? Do you want to confine us to that life of quiet desperation?" (multiple=2)
-    inner_child"..." (multiple=2)
+    show bg darkness with fade
+    death_drive"{color=#808080}Is that what you want? Do you want to confine us to that life of quiet desperation?" (multiple=2) with fade
+    inner_child"..." (multiple=2) with fade
     
     jump part_2
-
-    # This ends the game.
-    return

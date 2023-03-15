@@ -13,10 +13,21 @@ define flash = Fade(0.5, 1.0, 0.5, color="#fff")
 image bg darkness = im.Scale("bg darkness.jpg", 1920, 1080)
 image bg test = im.Scale("bg test.jpg", 1920, 1080)
 image bg printing room = im.Scale("bg printing room.png", 1920, 1080)
-image bg jinsol and knife guy = im.Scale("bg jinsol and knife guy.png", 1920, 1080)
+image bg jinsol and knife guy = im.Scale("bg assailant and jinsol.png", 1920, 1080)
 image bg knife grab = im.Scale("bg knife grab.png", 1920, 1080)
-image bg bar = Movie(size=(1920,1080),play="bg bar.webm")
 
+image bg bar:
+    "bg drink 1.png" with dissolve
+    pause 0.5
+    "bg drink 2.png" with dissolve
+    pause 1.5
+    "bg drink 3.png" with dissolve
+    pause 2.5
+    "bg drink 2.png" with dissolve
+    pause 1.5
+    "bg drink 1.png" with dissolve
+    pause 0.5
+    repeat
 # The game starts here.
 
 # Grey: {color=#808080}
@@ -43,15 +54,18 @@ label start:
 label intro:
     # first song, adult_voice_intro
 
-    show bg jinsol and knife guy with flash
-    show bg knife grab with flash
-    show bg darkness with flash
-
     #[FLASH: JINSOL & KNIFE ASSAILANT]
+    show bg jinsol and knife guy with flash
+    
     #[FLASH: JINSOL TAKING KNIFE]
+    show bg knife grab with flash
+
     #[FLASH: JINSOL, BLOOD ON BRIEFCASE]
     #[JINSOL: EYES OPEN]
     #[JINSOL: EYES CLOSED]
+
+    show bg darkness with flash
+
     play music "audio/sample.mp3" fadein 1.0
 
     death_drive"Thank you for doing your best." (multiple=2) with Dissolve(1.0)
@@ -197,6 +211,3 @@ label intro:
     inner_child"{color=#808080}No, not that. I don’t know. I don’t know. It hurts." (multiple=2)
 
     jump part_1
-    # This ends the game.
-
-    return
