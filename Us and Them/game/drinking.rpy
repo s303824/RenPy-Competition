@@ -49,7 +49,7 @@ label part_1:
             inner_child"{color=#808080}It does, more than you think." (multiple=2)
 
     # [FADE TO ALCOHOL MEMORY GIF]
-
+    show bg bar with fade
     death_drive"Do you remember the first time you got drunk?" (multiple=2)
     inner_child"" (multiple=2)
 

@@ -2,12 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 51: invalid syntax
-    MultipleTransition([\
-                ^
-            False, flash,\
-            bg jinsol and knife guy, Pause(1.0),\
-    
+File "game/script.rpy", line 18: positional argument follows keyword argument
+    Movie(size=(1920,1080),"bg bar.webm")
+                                         ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Tue Mar 14 23:53:20 2023
+Wed Mar 15 01:32:48 2023

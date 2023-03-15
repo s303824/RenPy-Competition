@@ -177,10 +177,8 @@ label part_3:
             mentor"\“Can you open the door for me?\”" (multiple=2)
             mentor"" (multiple=2)
     
-    show bg darkness with flash
-
-    show bg jinsol and knife guy with flash and Pause(0.5)
-
+    show bg jinsol and knife guy with flash
+    show bg knife grab with flash
     show bg darkness with flash
 
 #[BLACK BACKGROUND]

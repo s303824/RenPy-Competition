@@ -14,6 +14,8 @@ image bg darkness = im.Scale("bg darkness.jpg", 1920, 1080)
 image bg test = im.Scale("bg test.jpg", 1920, 1080)
 image bg printing room = im.Scale("bg printing room.png", 1920, 1080)
 image bg jinsol and knife guy = im.Scale("bg jinsol and knife guy.png", 1920, 1080)
+image bg knife grab = im.Scale("bg knife grab.png", 1920, 1080)
+image bg bar = Movie(size=(1920,1080),play="bg bar.webm")
 
 # The game starts here.
 
@@ -35,17 +37,14 @@ label start:
 
     # Always include (multiple=2)
 
-    death_drive "TRIGGER WARNING: depression, alcoholism, domestic violence, suicidal ideation, Korean historical trauma." (multiple=2) with dissolve
-    inner_child "Viewer’s discretion is advised."(multiple=2) with dissolve
+    death_drive "TRIGGER WARNING: depression, alcoholism, domestic violence, suicidal ideation, Korean historical trauma." (multiple=2)
+    inner_child "Viewer’s discretion is advised."(multiple=2)
 
 label intro:
     # first song, adult_voice_intro
-    play music "audio/sample.mp3" fadein 1.0
 
-    show bg darkness with flash
-
-    show bg jinsol and knife guy with flash and Pause(0.5)
-
+    show bg jinsol and knife guy with flash
+    show bg knife grab with flash
     show bg darkness with flash
 
     #[FLASH: JINSOL & KNIFE ASSAILANT]
@@ -53,6 +52,7 @@ label intro:
     #[FLASH: JINSOL, BLOOD ON BRIEFCASE]
     #[JINSOL: EYES OPEN]
     #[JINSOL: EYES CLOSED]
+    play music "audio/sample.mp3" fadein 1.0
 
     death_drive"Thank you for doing your best." (multiple=2) with Dissolve(1.0)
     inner_child"" (multiple=2)
@@ -91,17 +91,17 @@ label intro:
     inner_child"" (multiple=2)
 
     stop music 
+    play music "audio/Renpy2Loop.mp3" fadein 1.0 loop
 
-    death_drive"{color=#808080}{i}So open your eyes and answer it. Your knife is in this room somewhere. This is it: bitter injustice. Your final act of rebellion shall-{/i}" (multiple=2)
+    death_drive"{color=#808080}{i}Your knife is in this room somewhere. This is it: bitter injustice. Your final act of rebellion shall-{/i}" (multiple=2)
     inner_child"{i}Stop.{/i}" (multiple=2)
 
-    death_drive"{color=#808080}{i}So open your eyes and answer it. Your knife is in this room somewhere. This is it: bitter injustice. Your final act of rebellion shall-{/i}" (multiple=2)
+    death_drive"{color=#808080}{i}Your knife is in this room somewhere. This is it: bitter injustice. Your final act of rebellion shall-{/i}" (multiple=2)
     inner_child"{i}Please.{/i}" (multiple=2)
     
     # second song, child_voice_intro
-    play music "audio/renpydraft1.mp3" fadein 1.0 loop
 
-    death_drive"{color=#808080}{i}So open your eyes and answer it. Your knife is in this room somewhere. This is it: bitter injustice. Your final act of rebellion shall-{/i}" (multiple=2)
+    death_drive"{color=#808080}{i}Your knife is in this room somewhere. This is it: bitter injustice. Your final act of rebellion shall-{/i}" (multiple=2)
     inner_child"She mustn't open her eyes. I won’t allow it." (multiple=2)
 
     death_drive"Damn." (multiple=2)
