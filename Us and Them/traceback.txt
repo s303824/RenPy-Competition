@@ -1,52 +1,49 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-Compiling ATL code at game/script.rpy:19
-  File "game/conclusion.rpy", line 117, in script
-    show jinsol talking at center with fade
-  File "game/script.rpy", line 19, in <module>
-    loop
-NameError: name 'loop' is not defined
+While running game code:
+  File "game/script.rpy", line 89, in script
+    inner_child"" (multiple=2)
+OSError: Couldn't find file 'audio.knife.mp3'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/conclusion.rpy", line 117, in script
-    show jinsol talking at center with fade
-  File "C:\Users\Quirk\Documents\RenPy-Competition\renpy\ast.py", line 1408, in execute
-    show_imspec(self.imspec, atl=getattr(self, "atl", None))
-  File "C:\Users\Quirk\Documents\RenPy-Competition\renpy\ast.py", line 1371, in show_imspec
-    renpy.config.show(name,
-  File "C:\Users\Quirk\Documents\RenPy-Competition\renpy\exports.py", line 712, in show
-    sls.add(layer, img, key, zorder, behind, at_list=at_list, name=name, atl=atl, default_transform=default_transform, transient=transient)
-  File "C:\Users\Quirk\Documents\RenPy-Competition\renpy\display\core.py", line 1165, in add
-    thing.visit_all(lambda d : None)
-  File "C:\Users\Quirk\Documents\RenPy-Competition\renpy\display\core.py", line 582, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Quirk\Documents\RenPy-Competition\renpy\display\core.py", line 582, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Quirk\Documents\RenPy-Competition\renpy\display\core.py", line 572, in visit_all
-    for d in self.visit():
-  File "C:\Users\Quirk\Documents\RenPy-Competition\renpy\atl.py", line 614, in visit
-    block = self.compile()
-  File "C:\Users\Quirk\Documents\RenPy-Competition\renpy\atl.py", line 521, in compile
-    block = self.atl.compile(self.context)
-  File "C:\Users\Quirk\Documents\RenPy-Competition\renpy\atl.py", line 721, in compile
-    statements = [ i.compile(ctx) for i in self.statements ]
-  File "C:\Users\Quirk\Documents\RenPy-Competition\renpy\atl.py", line 721, in <listcomp>
-    statements = [ i.compile(ctx) for i in self.statements ]
-  File "C:\Users\Quirk\Documents\RenPy-Competition\renpy\atl.py", line 969, in compile
-    child = ctx.eval(expr)
-  File "C:\Users\Quirk\Documents\RenPy-Competition\renpy\atl.py", line 259, in eval
-    return renpy.python.py_eval(expr, locals=self.context)
-  File "C:\Users\Quirk\Documents\RenPy-Competition\renpy\python.py", line 1092, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\Quirk\Documents\RenPy-Competition\renpy\python.py", line 1085, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 19, in <module>
-    loop
-NameError: name 'loop' is not defined
+  File "game/script.rpy", line 89, in script
+    inner_child"" (multiple=2)
+  File "C:\Users\Quirk\Documents\RenPy-Competition\renpy\ast.py", line 921, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\Quirk\Documents\RenPy-Competition\renpy\exports.py", line 1373, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\Quirk\Documents\RenPy-Competition\renpy\character.py", line 1266, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "C:\Users\Quirk\Documents\RenPy-Competition\renpy\character.py", line 927, in do_display
+    display_say(who,
+  File "C:\Users\Quirk\Documents\RenPy-Competition\renpy\character.py", line 666, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\Quirk\Documents\RenPy-Competition\renpy\ui.py", line 299, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Quirk\Documents\RenPy-Competition\renpy\display\core.py", line 3377, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\Quirk\Documents\RenPy-Competition\renpy\display\core.py", line 3846, in interact_core
+    renpy.audio.audio.interact()
+  File "C:\Users\Quirk\Documents\RenPy-Competition\renpy\audio\audio.py", line 1213, in interact
+    periodic()
+  File "C:\Users\Quirk\Documents\RenPy-Competition\renpy\audio\audio.py", line 1166, in periodic
+    raise_(exc[0], exc[1], exc[2])
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/site-packages/future/utils/__init__.py", line 441, in raise_
+  File "C:\Users\Quirk\Documents\RenPy-Competition\renpy\audio\audio.py", line 1144, in periodic_thread_main
+    periodic_pass()
+  File "C:\Users\Quirk\Documents\RenPy-Competition\renpy\audio\audio.py", line 1086, in periodic_pass
+    c.periodic()
+  File "C:\Users\Quirk\Documents\RenPy-Competition\renpy\audio\audio.py", line 517, in periodic
+    topf = load(filename)
+  File "C:\Users\Quirk\Documents\RenPy-Competition\renpy\audio\audio.py", line 70, in load
+    rv = renpy.loader.load(fn)
+  File "C:\Users\Quirk\Documents\RenPy-Competition\renpy\loader.py", line 820, in load
+    raise IOError("Couldn't find file '%s'." % name)
+OSError: Couldn't find file 'audio.knife.mp3'.
 
 Windows-10-10.0.19044 AMD64
 Ren'Py 8.0.3.22090809
 Us and Them 
-Wed Mar 15 17:16:37 2023
+Wed Mar 15 21:30:52 2023

@@ -7,6 +7,7 @@ label part_2:
 
     menu:
         "\“Silenced.\”":
+            voice "audio/sad child.mp3"
             death_drive"{color=#808080}{cps=0}Felt what?" (multiple=2)
             inner_child"{i}Yes.{/i}" (multiple=2)
             
@@ -17,6 +18,7 @@ label part_2:
             death_drive"{color=#808080}{cps=0}Felt what?" (multiple=2)
             inner_child"But there was something before that- something underneath. She just has to remember." (multiple=2)
 
+            voice "audio/intense adult.mp3"
             death_drive"We don’t want to think about this." (multiple=2)
             inner_child"{color=#808080}{cps=0}But there was something before that- something underneath. She just has to remember." (multiple=2)
 
@@ -27,6 +29,7 @@ label part_2:
     # [FADE TO MOTHER MEMORY GIF]
     show bg parents with fade
 
+    voice "audio/sad child.mp3"
     death_drive"" (multiple=2)
     inner_child"{i}You were only ten years old.{/i}" (multiple=2)
 
@@ -57,6 +60,7 @@ label part_2:
     death_drive"{color=#808080}{cps=0}......" (multiple=2)
     inner_child"{i}Who would believe us?{/i}" (multiple=2)
 
+    voice "audio/normal adult.mp3"
     death_drive"{i}Who would care?{/i}" (multiple=2)
     inner_child"{color=#808080}{i}{cps=0}Who would believe us?{/i}" (multiple=2)
 

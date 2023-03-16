@@ -1,8 +1,9 @@
 label part_4:
 
-    death_drive"..." (multiple=2) with Dissolve(1.0)
-    inner_child"..." (multiple=2) with Dissolve(1.0)
+    death_drive"..." (multiple=2)
+    inner_child"..." (multiple=2)
 
+    voice "audio/normal child.mp3"
     death_drive"{color=#808080}{cps=0}..." (multiple=2)
     inner_child"{i}Kyeong-Ae was really special.{/i}" (multiple=2)
 
@@ -12,6 +13,7 @@ label part_4:
     death_drive"{color=#808080}{cps=0}..." (multiple=2)
     inner_child"{i}And she was kind. She cared about you.{/i}" (multiple=2)
 
+    voice "audio/normal adult.mp3"
     death_drive"{i}She was a selfless knight. Someone to look up to.{/i}" (multiple=2)
     inner_child"{color=#808080}{i}{cps=0}And she was kind. She cared about you.{/i}" (multiple=2)
 
@@ -59,6 +61,7 @@ label part_4:
 
     menu:
         "Remember her valor.":
+            voice "audio/normal adult.mp3"
             death_drive"{i}Then do as much as you can before you burn out.{/i}" (multiple=2)
             inner_child"" (multiple=2)
             
@@ -66,6 +69,7 @@ label part_4:
             inner_child"" (multiple=2)
 
         "Remember her wish.":
+            voice "audio/sad child.mp3"
             death_drive"" (multiple=2)
             inner_child"{i}Then take care of yourself.{/i}" (multiple=2)
 
@@ -73,12 +77,15 @@ label part_4:
             inner_child"{i}Everyone is waiting with bated breath to hear what you have to say.{/i}" (multiple=2)
 
 
-    death_drive"..." (multiple=2) with Dissolve(1.0)
-    inner_child"..." (multiple=2) with Dissolve(1.0)
+    death_drive"..." (multiple=2)
+    inner_child"..." (multiple=2)
+
+    voice "audio/normal adult.mp3"
 
     death_drive"I still want that drink." (multiple=2)
     inner_child"{color=#808080}{cps=0}..." (multiple=2)
 
+    voice "audio/sad child.mp3"
     death_drive"{color=#808080}{cps=0}I still want that drink." (multiple=2)
     inner_child"I know." (multiple=2)
 
@@ -113,23 +120,27 @@ label part_4:
     inner_child"{color=#808080}{cps=0}Yeah, it is." (multiple=2)
     
     stop music
-    scene bg backwall with fade
-    show jinsol with fade
+    scene bg backwall 
+    show jinsol 
+    with fade
+    play sound "audio/heartbeat.mp3" fadein 1.0 volume 0.25 loop
     protagonist"Quiet."
 
     protagonist"You’re both so damn loud."
 
     protagonist"I’ve heard enough."
 
-    protagonist"I know now what I must do."
+    protagonist"I know what I have to do."
 
     menu:
         "Pick up the briefcase":
+            stop sound
+            scene bg darkness with fade
             play sound "audio/door.mp3" noloop 
-            show bg darkness with Fade(0.5, 1.0, 0.5)
-            pause(3.0)
+            pause(6.0)
             return
         "Close your eyes again":
-            show bg darkness with Fade(0.5, 1.0, 0.5)
+            scene bg darkness with fade
+            pause(6.0)
             return
     return

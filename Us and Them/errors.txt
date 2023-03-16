@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/drinking.rpy", line 117: end of line expected.
-    hide bg bar with fadeout 1.0
-                             ^
+File "game/conclusion.rpy", line 139: choice menuitem expects a non-empty block.
+    "Close your eyes again":
+                            ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Wed Mar 15 18:37:54 2023
+Wed Mar 15 20:49:56 2023

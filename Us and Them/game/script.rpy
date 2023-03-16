@@ -9,30 +9,37 @@ define death_drive = Character("", what_color="#ff0000")
 define mentor = Character("", what_color="#ffe15d")
 
 define flash = Fade(0.5, 1.0, 0.5, color="#fff")
+define blood = Fade(0.5, 1.0, 0.5, color="#ff0000")
 
 image jinsol = "jinsol.png"
 image jinsol outline = "jinsol blood.png"
 image jinsol mouth closed = "jinsol mouth closed.png"
+
+image kyeongae = "kyeongae neutral.png"
+image kyeongae happy = "kyeongae happy.png"
 
 image bg darkness = im.Scale("bg darkness.jpg", 1920, 1080)
 image bg test = im.Scale("bg test.jpg", 1920, 1080)
 image bg printing room = im.Scale("bg printing room.png", 1920, 1080)
 image bg jinsol and knife guy = im.Scale("bg assailant and jinsol.png", 1920, 1080)
 image bg knife grab = im.Scale("bg knife grab.png", 1920, 1080)
+image bg hand = im.Scale("bg hand.png", 1920, 1080)
+
 image bg backwall = im.Scale("bg backwall.png", 1920, 1080)
 image bg parents = Movie(size=(1920,1080), play="bg parents.webm")
 image bg bar:
     "bg drink 1.png" with dissolve
-    pause 0.5
+    pause 1.5
     "bg drink 2.png" with dissolve
     pause 1.5
     "bg drink 3.png" with dissolve
-    pause 2.5
+    pause 3.0
     "bg drink 2.png" with dissolve
     pause 1.5
     "bg drink 1.png" with dissolve
-    pause 0.5
+    pause 1.5
     repeat
+    
 # The game starts here.
 
 # Grey: {color=#808080}
@@ -64,14 +71,17 @@ label intro:
     #[FLASH: JINSOL TAKING KNIFE]
     show bg knife grab with flash
 
+    play audio "audio/knife.mp3" noloop
+    show bg hand with blood
+
     #[JINSOL: EYES OPEN]
     #[JINSOL: EYES CLOSED]
 
-    show bg darkness with flash
+    show bg darkness with blood
     #stop sound fadeout 1.0
     #play music "audio/sample.mp3" fadein 1.0
 
-
+    voice "audio/intense adult.mp3"
     death_drive"Thank you for doing your best." (multiple=2) with Dissolve(1.0)
     inner_child"" (multiple=2)
 
@@ -86,7 +96,7 @@ label intro:
 
     death_drive"{i}But more than anything, you can sense that THIS is the moment.{/i}" (multiple=2) with dissolve
     inner_child"" (multiple=2)
-
+    
     death_drive"{i}Do you feel it?{/i}" (multiple=2) with dissolve
     inner_child"" (multiple=2)
 
@@ -109,8 +119,8 @@ label intro:
     inner_child"" (multiple=2)
     
     stop sound fadeout 1.0
-    #stop music 
-    play music "audio/Renpy2Loop.mp3" fadein 1.0 loop
+
+    voice "audio/sad child.mp3"
 
     death_drive"{color=#808080}{i}{cps=0}Your knife is in this room somewhere. This is it: bitter injustice. Your final act of rebellion shall-{/i}" (multiple=2)
     inner_child"{i}Stop.{/i}" (multiple=2)
@@ -118,7 +128,7 @@ label intro:
     death_drive"{color=#808080}{i}{cps=0}Your knife is in this room somewhere. This is it: bitter injustice. Your final act of rebellion shall-{/i}" (multiple=2)
     inner_child"{i}Please.{/i}" (multiple=2)
     
-    # second song, child_voice_intro
+    play music "audio/Renpy2Loop.mp3" fadein 2.0 loop
 
     death_drive"{color=#808080}{i}{cps=0}Your knife is in this room somewhere. This is it: bitter injustice. Your final act of rebellion shall-{/i}" (multiple=2)
     inner_child"She mustn't open her eyes. I won’t allow it." (multiple=2)
@@ -171,10 +181,7 @@ label intro:
     death_drive"You should have learned by now: hope isn’t sustainable- it hasn’t been for the twenty-six shitty years she’s been alive." (multiple=2)
     inner_child"{color=#808080}{cps=0}She’s still shutting her eyes." (multiple=2)
 
-    death_drive"And neither will listening to you." (multiple=2)
-    inner_child"{color=#808080}{cps=0}She’s still shutting her eyes." (multiple=2)
-
-    death_drive"{color=#808080}{cps=0}And neither will listening to you." (multiple=2)
+    death_drive"{color=#808080}{cps=0}You should have learned by now: hope isn’t sustainable- it hasn’t been for the twenty-six shitty years she’s been alive." (multiple=2)
     inner_child"Stop discrediting me." (multiple=2)
 
     death_drive"I’m truly hard-pressed to think of a time in which you haven’t existed just to crush her spirits." (multiple=2)
@@ -192,12 +199,14 @@ label intro:
     # [FADE IN: BLOODY HANDS, BLOODY FACE JINSOL SPRITE]
     show jinsol outline with Fade(0.5, 1.0, 0.5)
 
+    voice "audio/intense adult.mp3"
     death_drive"{i}Even without looking at yourself, you can feel it: little streams of blood, trickling down your forehead. Pooling in your hair. And dripping down your jaw. It’s warm.{/i}" (multiple=2)
     inner_child"" (multiple=2)
 
     death_drive"{i}The blood caked on your fingers, though, has long been dried. After all, it’s not yours.{/i}" (multiple=2)
     inner_child"" (multiple=2)
 
+    voice "audio/normal child.mp3"
     death_drive"{color=#808080}{i}{cps=0}The blood caked on your fingers, though, has long been dried. After all, it’s not yours.{/i}" (multiple=2)
     inner_child"{i}Don’t think about that.{/i}" (multiple=2)
 
@@ -208,9 +217,12 @@ label intro:
     inner_child"Not this. Something uplifting. Something like..." (multiple=2)
 
     # [FLASH: KYEONG-AE]
+    hide jinsol outline
+    show kyeongae happy with flash
+    hide kyeongae happy
     # [THEN BACK TO BLACK SCREEN]
-    # show bg darkness with flash
-
+    show bg darkness with flash
+    show jinsol outline
 
     death_drive"{color=#808080}{cps=0}Then what the hell do you want her to think about?" (multiple=2)
     inner_child"No, not that. I don’t know. I don’t know. It hurts." (multiple=2)

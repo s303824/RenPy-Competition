@@ -9,6 +9,9 @@ label part_3:
     inner_child"{i}Open your eyes.{/i}" (multiple=2)
 
 # [FULL ROOM. Jin-Sol SITTING SPRITE]
+    scene bg backwall 
+    show jinsol 
+    with fade
 
     death_drive"I think I understand you now." (multiple=2)
     inner_child"{color=#808080}{i}{cps=0}Open your eyes.{/i}" (multiple=2)
@@ -28,7 +31,7 @@ label part_3:
     death_drive"{color=#808080}{cps=0}Kyeong-Ae." (multiple=2)
     inner_child"..." (multiple=2)
 
-    death_drive"Listen, you must bear witness." (multiple=2)
+    death_drive"You must bear witness." (multiple=2)
     inner_child"{color=#808080}{cps=0}..." (multiple=2)
 
     death_drive"I don’t want to think about what happened either. But if you’re that adamant on holding out, I don’t think we have a choice." (multiple=2)
@@ -42,13 +45,15 @@ label part_3:
 
     death_drive"Me too." (multiple=2)
     inner_child"" (multiple=2)
-
-    death_drive"" (multiple=2)
-    inner_child"" (multiple=2)
-    
-    # hide bg darkness
+    show bg darkness
     hide jinsol outline
+    pause(2.0)
+
     # [BACKGROUND: KYEONG-AE]
+
+    scene bg printing room 
+    show kyeongae
+    with fade
 
     mentor"\“Thanks for meeting  me on such short notice. To be honest, I’ve been putting off this chat for a while now.\”" (multiple=2)
     mentor"" (multiple=2)
@@ -56,8 +61,12 @@ label part_3:
     mentor"{color=#808080}{cps=0}\“Thanks for meeting  me on such short notice. To be honest, I’ve been putting off this chat for a while now.\”" (multiple=2)
     mentor"\“I’m sorry about that.\”" (multiple=2)
 
+    show kyeongae happy
+
     mentor"\“But really though, thank you for doing your best to get down here.\”" (multiple=2)
     mentor"{color=#808080}{cps=0}\“I’m sorry about that.\”" (multiple=2)
+
+    show kyeongae
 
     mentor"{color=#808080}{cps=0}\“But really though, thank you for doing your best to get down here.\”" (multiple=2)
     mentor"\“There’s something I need to tell you.\”" (multiple=2)
@@ -70,12 +79,14 @@ label part_3:
             mentor"{color=#808080}{cps=0}\My sources went dark.\”" (multiple=2)
             mentor"\“I haven’t been able to contact anyone I interviewed for the exposé.\”" (multiple=2)
     
+    show kyeongae happy
     mentor"\“But I spoke with someone today whose testimony could help me piece this whole scheme of corruption together.\”" (multiple=2)
     mentor"{color=#808080}{cps=0}\“I haven’t been able to contact anyone I interviewed for the exposé.\”" (multiple=2)
     
     mentor"{color=#808080}{cps=0}\“But I spoke with someone today whose testimony could help me piece this whole scheme of corruption together.\”" (multiple=2)
     mentor"\“We’ll have everything we need.\”" (multiple=2)
 
+    show kyeongae
     mentor"\“And then we can finally tell the world about the ruin this bastard politician caused during the war.\”" (multiple=2)
     mentor"{color=#808080}{cps=0}\“We’ll have everything we need.\”" (multiple=2)
 
@@ -100,10 +111,11 @@ label part_3:
             mentor"" (multiple=2)
 
             mentor"{color=#808080}{cps=0}\“You look nervous.\”" (multiple=2)
-            mentor"\“Why?\”" (multiple=2)
+            mentor"\“What's wrong?\”" (multiple=2)
 
     menu:
         "\“It’s nothing.\”":
+            show kyeongae happy
             mentor"\“Heh, you’re such a liar. Are you worried about me?\”" (multiple=2)
             mentor"" (multiple=2)
 
@@ -114,13 +126,15 @@ label part_3:
         "\“Please, call off the meeting.\”":
             menu:
                 "\“I have a bad feeling about this.\”":
+                    show kyeongae
                     mentor"\“...\”" (multiple=2)
                     mentor"" (multiple=2)
 
     mentor"\“It’s okay to be scared.\”" (multiple=2)
     mentor"" (multiple=2)
 
-    mentor"{color=#808080}{cps=0}\“It’s okay being scared.\”" (multiple=2)
+    show kyeongae happy
+    mentor"{color=#808080}{cps=0}\“It’s okay to be scared.\”" (multiple=2)
     mentor"\“But I’ve seen in a thousand ways just how brave you truly are.\”" (multiple=2)
 
     menu:
@@ -137,6 +151,7 @@ label part_3:
     mentor"{color=#808080}{cps=0}\“But to serve the people is the highest honor.\”" (multiple=2)
     mentor"\“This is worth the risk.\”" (multiple=2)
 
+    show kyeongae
     mentor"\“And besides...\”" (multiple=2)
     mentor"{color=#808080}{cps=0}\“This is worth the risk.\”" (multiple=2)
     
@@ -168,32 +183,33 @@ label part_3:
 
     menu:
         "\“I will.\”":
+            show kyeongae happy
             mentor"\“I know.\”" (multiple=2)
             mentor"" (multiple=2)
 
             mentor"{color=#808080}{cps=0}\“I know.\”" (multiple=2)
             mentor"\“Also, can you do one more thing for me?\”" (multiple=2)
-
-    menu:
-        "\“Of course. Anything.\”":
             # [SOUND EFFECT: KNOCKING]
             play sound "audio/knocking.mp3" noloop
 
+
+    menu:
+        "\“Of course. Anything.\”":
+            hide kyeongae happy
+            show bg darkness
             mentor"\“Can you open the door for me?\”" (multiple=2)
             mentor"" (multiple=2)
     
     
-    #[BLACK BACKGROUND]
-    show bg darkness with flash
-
     #[FLASH: JINSOL & KNIFE ASSAILANT BACKGROUND]
     show bg jinsol and knife guy with flash
 
     #[FLASH: JINSOL TAKING KNIFE BACKGROUND]
     show bg knife grab with flash
 
+    show bg hand with blood
     #[BACKGROUND: JINSOL, EYES OPEN SPRITE]
 
-    show bg printing room with fade
+    show bg printing room with flash
 
     jump part_4

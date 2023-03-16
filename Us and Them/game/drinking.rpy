@@ -23,6 +23,7 @@ label part_1:
 
     menu:
         "\“Tell me.\”":
+            voice "audio/intense adult.mp3"
             death_drive"{i}Because these are some strong things you’re feeling right now. You’re WAY too uncomfortable with what happened tonight.{/i}" (multiple=2)
             inner_child"{color=#808080}{cps=0}Oh, god." (multiple=2)
 
@@ -33,6 +34,7 @@ label part_1:
             inner_child"{color=#808080}{cps=0}Oh, god." (multiple=2)
 
         "\“I’m afraid of what you’ll have to say.\”":
+            voice "audio/sad child.mp3"
             death_drive"{color=#808080}{i}{cps=0}You wanna know why?{/i}" (multiple=2)
             inner_child"{i}You should be. You sound like your father when you think things like that.{/i}" (multiple=2)
 
@@ -47,8 +49,10 @@ label part_1:
     
     hide jinsol outline fadeout 1.0
     # [FADE TO ALCOHOL MEMORY GIF]
+    play sound "audio/bar.mp3" loop volume 0.25 fadein 1.0
     show bg bar with fade
 
+    voice "audio/intense adult.mp3"
     death_drive"{i}Do you remember the first time you got drunk?{/i}" (multiple=2)
     inner_child"" (multiple=2)
 
@@ -61,6 +65,7 @@ label part_1:
     death_drive"{i}The winds of change were moving and in that small window of opportunity, it felt like history was going to be made BY Korea.{/i}" (multiple=2)
     inner_child"" (multiple=2)
 
+    voice "audio/sad child.mp3"
     death_drive"{color=#808080}{i}{cps=0}The winds of change were moving and in that small window of opportunity, it felt like history was going to be made BY Korea.{/i}" (multiple=2)
     inner_child"{i}Not just that. There was pride in your comrades. They were proud of you.{/i}" (multiple=2)
 
@@ -103,7 +108,14 @@ label part_1:
     death_drive"Such is our sacrifice to this world: to die with your heart on your sleeve and to share a grave with the truth. She drinks to forget that this too will be her fate." (multiple=2)
     inner_child"{color=#808080}{cps=0}Only to wake up, remember, and do it all over again." (multiple=2)
 
-# [FLASH: KYEONG-AE]
+    # [FLASH: KYEONG-AE]
+    show bg darkness with flash
+    show kyeongae happy
+    pause (0.5)
+    # [THEN BACK TO BLACK SCREEN]
+    hide kyeongae happy
+    show bg bar with blood
+
 
     death_drive"..." (multiple=2)
     inner_child"{color=#808080}{cps=0}Only to wake up, remember, and do it all over again." (multiple=2)
@@ -114,10 +126,11 @@ label part_1:
     death_drive"Is that what you want? Do you want to confine us to that life of quiet desperation?" (multiple=2)
     inner_child"{color=#808080}{cps=0}Only to wake up, remember, and do it all over again." (multiple=2)
 
+    stop sound fadeout 1.0
     show bg darkness with fade
     show jinsol outline
 
-    death_drive"{color=#808080}{cps=0}Is that what you want? Do you want to confine us to that life of quiet desperation?" (multiple=2) with fade
-    inner_child"..." (multiple=2) with fade
+    death_drive"{color=#808080}{cps=0}Is that what you want? Do you want to confine us to that life of quiet desperation?" (multiple=2)
+    inner_child"..." (multiple=2)
     
     jump part_2
