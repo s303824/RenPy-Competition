@@ -49,7 +49,7 @@ label part_1:
     
     hide jinsol outline fadeout 1.0
     # [FADE TO ALCOHOL MEMORY GIF]
-    play sound "audio/bar.mp3" loop volume 0.25 fadein 1.0
+    play sound "audio/bar.mp3" loop volume 0.40 fadein 1.0
     show bg bar with fade
 
     voice "audio/intense adult.mp3"
