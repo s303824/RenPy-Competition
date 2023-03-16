@@ -1,4 +1,5 @@
 label part_4:
+    show bg printing room
 
     death_drive"..." (multiple=2)
     inner_child"..." (multiple=2)
@@ -120,14 +121,13 @@ label part_4:
     inner_child"{color=#808080}{cps=0}Yeah, it is." (multiple=2)
     
     stop music
-    scene bg backwall 
-    show jinsol 
-    with fade
+    show jinsol enough
     play sound "audio/heartbeat.mp3" fadein 1.0 volume 0.25 loop
     protagonist"Quiet."
 
     protagonist"You’re both so damn loud."
 
+    scene bg jinsol eyes forward with fade 
     protagonist"I’ve heard enough."
 
     protagonist"I know what I have to do."

@@ -14,6 +14,7 @@ define blood = Fade(0.5, 1.0, 0.5, color="#ff0000")
 image jinsol = "jinsol.png"
 image jinsol outline = "jinsol blood.png"
 image jinsol mouth closed = "jinsol mouth closed.png"
+image jinsol enough =  im.Scale("bg jinsol enough.png", 1920, 1080)
 
 image kyeongae = "kyeongae neutral.png"
 image kyeongae happy = "kyeongae happy.png"
@@ -21,6 +22,11 @@ image kyeongae happy = "kyeongae happy.png"
 image bg darkness = im.Scale("bg darkness.jpg", 1920, 1080)
 image bg test = im.Scale("bg test.jpg", 1920, 1080)
 image bg printing room = im.Scale("bg printing room.png", 1920, 1080)
+
+image bg jinsol eyes wide = im.Scale("bg jinsol eye wide.png", 1920, 1080)
+image bg jinsol eyes closed = im.Scale("bg jinsol eyes closed.png", 1920, 1080)
+image bg jinsol eyes forward = im.Scale("bg jinsol eyes forward.png", 1920, 1080)
+
 image bg jinsol and knife guy = im.Scale("bg assailant and jinsol.png", 1920, 1080)
 image bg knife grab = im.Scale("bg knife grab.png", 1920, 1080)
 image bg hand = im.Scale("bg hand.png", 1920, 1080)
@@ -75,7 +81,13 @@ label intro:
     show bg hand with blood
 
     #[JINSOL: EYES OPEN]
+    show bg jinsol eyes wide with blood
+    pause(0.3)
+
+    show bg jinsol eyes forward
+    pause(0.3)
     #[JINSOL: EYES CLOSED]
+    show bg jinsol eyes closed
 
     show bg darkness with blood
     #stop sound fadeout 1.0

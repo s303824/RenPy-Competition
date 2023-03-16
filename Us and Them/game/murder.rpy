@@ -9,6 +9,15 @@ label part_3:
     inner_child"{i}Open your eyes.{/i}" (multiple=2)
 
 # [FULL ROOM. Jin-Sol SITTING SPRITE]
+    show bg jinsol eyes closed with fade
+    pause(0.3)
+
+    show bg jinsol eyes forward
+    pause(0.3)
+    #[JINSOL: EYES CLOSED]
+    show bg jinsol eyes wide
+    
+
     scene bg backwall 
     show jinsol 
     with fade
@@ -51,16 +60,14 @@ label part_3:
 
     # [BACKGROUND: KYEONG-AE]
 
-    scene bg printing room 
-    show kyeongae
-    with fade
-
+    scene bg printing room with fade
     mentor"\“Thanks for meeting  me on such short notice. To be honest, I’ve been putting off this chat for a while now.\”" (multiple=2)
     mentor"" (multiple=2)
-    
+    pause(0.5)
+    show kyeongae
+
     mentor"{color=#808080}{cps=0}\“Thanks for meeting  me on such short notice. To be honest, I’ve been putting off this chat for a while now.\”" (multiple=2)
     mentor"\“I’m sorry about that.\”" (multiple=2)
-
     show kyeongae happy
 
     mentor"\“But really though, thank you for doing your best to get down here.\”" (multiple=2)
@@ -209,7 +216,8 @@ label part_3:
 
     show bg hand with blood
     #[BACKGROUND: JINSOL, EYES OPEN SPRITE]
-
-    show bg printing room with flash
-
+    show bg jinsol eyes wide with blood
+    scene bg backwall 
+    show jinsol 
+    with fade
     jump part_4

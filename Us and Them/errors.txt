@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/conclusion.rpy", line 139: choice menuitem expects a non-empty block.
-    "Close your eyes again":
-                            ^
+File "game/script.rpy", line 17: invalid syntax
+    im.Scale(""jinsol enough.png"", 1920, 1080)
+                ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Wed Mar 15 20:49:56 2023
+Wed Mar 15 23:13:42 2023
