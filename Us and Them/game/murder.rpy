@@ -80,10 +80,10 @@ label part_3:
     
     menu:
         "\“Is something wrong, Kyeong-Ae?\”":
-            mentor"\My sources went dark.\”" (multiple=2)
+            mentor"\“My sources went dark.\”" (multiple=2)
             mentor"" (multiple=2)
 
-            mentor"{color=#808080}{cps=0}\My sources went dark.\”" (multiple=2)
+            mentor"{color=#808080}{cps=0}\“My sources went dark.\”" (multiple=2)
             mentor"\“I haven’t been able to contact anyone I interviewed for the exposé.\”" (multiple=2)
     
     show kyeongae happy

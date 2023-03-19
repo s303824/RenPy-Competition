@@ -49,13 +49,13 @@ label part_4:
     inner_child"It’s hard." (multiple=2)
 
     death_drive"{color=#808080}{cps=0}I guess not. The world got to her too." (multiple=2)
-    inner_child"If they had switched places, I would like to think that Kyeong-Ae would have asked Jinsol to reconsider too." (multiple=2)
+    inner_child"If they had switched places, I would like to think that Kyeong-Ae would have asked Jin-sol to reconsider too." (multiple=2)
         
     death_drive"Maybe. I don’t know." (multiple=2)
-    inner_child"{color=#808080}{cps=0}If they had switched places, I would like to think that Kyeong-Ae would have asked Jinsol to reconsider too." (multiple=2)
+    inner_child"{color=#808080}{cps=0}If they had switched places, I would like to think that Kyeong-Ae would have asked Jin-sol to reconsider too." (multiple=2)
 
     death_drive"I don’t know what to think of her anymore. There was so much to do." (multiple=2)
-    inner_child"{color=#808080}{cps=0}If they had switched places, I would like to think that Kyeong-Ae would have asked Jinsol to reconsider too." (multiple=2)
+    inner_child"{color=#808080}{cps=0}If they had switched places, I would like to think that Kyeong-Ae would have asked Jin-sol to reconsider too." (multiple=2)
 
     death_drive"{color=#808080}{cps=0}I don’t know what to think of her anymore. There was so much to do." (multiple=2)
     inner_child"And so much to say." (multiple=2)

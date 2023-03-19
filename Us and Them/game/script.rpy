@@ -3,7 +3,7 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define protagonist = Character("Jinsol", what_color="#B01E68", color="#B01E68")
+define protagonist = Character("Jin-sol", what_color="#B01E68", color="#B01E68")
 define inner_child = Character("", what_color="#ffffff")
 define death_drive = Character("", what_color="#ff0000")
 define mentor = Character("", what_color="#ffe15d")
